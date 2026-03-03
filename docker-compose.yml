@@ -19,12 +19,12 @@ services:
       - media:/media 
   frontend:
     env_file: .env
-    image: galonalody/kittygram_frontend/
+    image: galinalody/kittygram_frontend
     command: cp -r /app/build/. /frontend_static/
     volumes:
       - static:/frontend_static
   gateway:
-    image: galinalody/kittygram_gateway/
+    image: galinalody/kittygram_gateway
     env_file: .env
     ports:
       - 9000:80
